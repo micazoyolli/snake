@@ -1,11 +1,14 @@
 html,
 body {
+  background: rgba(14,139,177,1);
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-canvas{
-  display: block;
-  margin: 0 auto;
+canvas {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
