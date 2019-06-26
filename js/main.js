@@ -88,6 +88,7 @@ function draw() {
     ctx.fillRect(snake[i].x, snake[i].y, box, box);
 
     ctx.strokeStyle = '#eef1f3';
+    ctx.lineWidth = 2;
     ctx.strokeRect(snake[i].x, snake[i].y, box, box);
   }
 
