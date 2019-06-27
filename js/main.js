@@ -13,6 +13,8 @@ const foodImg = new Image();
 
 foodImg.src = './assets/food.svg';
 
+const restartBtn = new Image();
+
 // Load Audio Files
 let dead = new Audio();
 let eat = new Audio();
@@ -79,6 +81,10 @@ function collision(head, array) {
   return false;
 }
 
+function restart() {
+  location.reload();
+}
+
 // Draw to the canvas
 function draw() {
   ctx.drawImage(ground, 0, 0);
@@ -128,6 +134,15 @@ function draw() {
   if (snakeX < box || snakeX > 17 * box || snakeY < 3 * box || snakeY > 17 *
     box || collision(newHead, snake)) {
     clearInterval(game);
+
+
+    restartBtn.onload = function() {
+      ctx.drawImage(restartBtn, 17 * box, 0.65 * box);
+    };
+
+    restartBtn.src = './assets/restart.svg';
+    document.getElementById('snake').addEventListener('click', restart);
+
     dead.play();
   }
 
@@ -138,5 +153,5 @@ function draw() {
   ctx.fillText(score, 2.3 * box, 1.6 * box);
 }
 
-// Call Function every 200 ms
+// Call function every 200 ms
 let game = setInterval(draw, 200);
