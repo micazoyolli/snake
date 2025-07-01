@@ -1,12 +1,10 @@
-# 🟦 Snake 
+# 🐍 Snake Game
 
-Juego clásico de Snake usando Javascript y canvas de HTML5 con sonido.
-
-<img alt="Snake" src="https://github.com/micazoyolli/snake/blob/master/assets/screenshot.png" width="500" />
+Juego clásico de Snake desarrollado en **TypeScript** con **HTML5 Canvas** y **SCSS**, usando **Vite** como build tool.
 
 ## 🌐 Demo
 
-[Snake Demo](https://micazoyolli.github.io/snake/)
+👉 [Ver demo online](https://micazoyolli.github.io/snake/)
 
 ## 🚀 Tecnologías usadas
 
@@ -24,39 +22,35 @@ snake/
 │   └── robots.txt
 ├── src/
 │   ├── game/
-│   │   ├── board.ts
+│   │   ├── audio.ts
+│   │   ├── controls.ts
+│   │   ├── food.ts
 │   │   ├── main.ts
-│   │   ├── piece.ts
-│   │   ├── renderer.ts
-│   │   └── tetrominoes.ts
+│   │   ├── snake.ts
+│   │   └── utils.ts
 │   ├── styles/
-│   │   ├── _buttons.scss
-│   │   ├── _layout.scss
-│   │   ├── _variables.scss
-│   │   └── main.scss
+│   │   ├── base.scss
+│   │   ├── canvas.scss
+│   │   ├── controls.scss
+│   │   ├── main.scss
+│   │   └── overlay.scss
 ├── index.html
 ├── .gitignore
 ├── LICENSE
 ├── package.json
 ├── tsconfig.json
-└── vite.config.ts
+├── vite.config.ts
+└── README.md
 ```
 
-## ▶️ Uso
+## ▶️ Cómo instalar y correr el juego
 
 ```bash
 yarn install
 yarn dev
 ```
 
-Abre `http://localhost:5173/snake/` para jugar.
-
-## 🧠 Funcionalidad
-
-- Lógica modular para piezas, tablero y render
-- Diseño responsive (desktop + mobile)
-- Niveles que incrementan la velocidad dinámicamente
-- Controles por teclado y touch (mobile)
+Abre `http://localhost:5173/snake` para jugar.
 
 ---
 
