@@ -1,10 +1,12 @@
 # 🐍 Snake Game
 
-Juego clásico de Snake desarrollado en **TypeScript** con **HTML5 Canvas** y **SCSS**, usando **Vite** como build tool.
+Juego interactivo de Snake con canvas HTML5 y TypeScript, desarrollado con estructura modular, SCSS y Vite. Incluye sonido, selección de fruta y color, y diseño responsive para desktop y mobile.
+
+<img alt="Snake" src="https://github.com/micazoyolli/snake/blob/master/public/assets/screenshot.png" width="500" />
 
 ## 🌐 Demo
 
-👉 [Ver demo online](https://micazoyolli.github.io/snake/)
+👉 [Snake Demo](https://micazoyolli.github.io/snake/)
 
 ## 🚀 Tecnologías usadas
 
@@ -29,28 +31,36 @@ snake/
 │   │   ├── snake.ts
 │   │   └── utils.ts
 │   ├── styles/
-│   │   ├── base.scss
-│   │   ├── canvas.scss
-│   │   ├── controls.scss
-│   │   ├── main.scss
-│   │   └── overlay.scss
+│   │   ├── _base.scss
+│   │   ├── _canvas.scss
+│   │   ├── _controls.scss
+│   │   ├── _overlay.scss
+│   │   └── main.scss
 ├── index.html
 ├── .gitignore
 ├── LICENSE
 ├── package.json
 ├── tsconfig.json
-├── vite.config.ts
-└── README.md
+└── vite.config.ts
 ```
 
-## ▶️ Cómo instalar y correr el juego
+## ▶️ Uso
 
 ```bash
 yarn install
 yarn dev
 ```
 
-Abre `http://localhost:5173/snake` para jugar.
+Abre `http://localhost:5173/snake/` para jugar.
+
+## 🧠 Funcionalidad
+
+- Lógica modular para serpiente, alimento y renderizado
+- Selección de fruta y color antes de jugar
+- Controles por teclado y touch (mobile)
+- Sonido integrado (comida, colisión, movimiento)
+- Diseño responsive (desktop + mobile)
+- Pausa y reanudación del juego
 
 ---
 
