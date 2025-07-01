@@ -1,0 +1,21 @@
+// VARIABLES GENERALES
+$background-color: #a8d093;
+$border-color: #4f7e33;
+$button-bg: #3cc746;
+$button-color: #fff;
+$button-color-control: #436b2d;
+$font-family: 'Fredoka', sans-serif;
+$fruit-sprite: '/assets/fruit_types.png';
+$fruit-size: 35px;
+$fruit-size-large: 138px;
+$fruit-total-width: 1932px;
+
+html,
+body {
+  background: $background-color;
+  box-sizing: border-box;
+  font-family: $font-family;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

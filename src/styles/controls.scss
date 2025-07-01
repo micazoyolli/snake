@@ -1,0 +1,16 @@
+#controls {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  button {
+    background: none;
+    border: 0;
+    color: $button-color-control;
+    cursor: pointer;
+    font-size: 24px;
+    outline: 0;
+  }
+}
