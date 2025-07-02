@@ -17,7 +17,7 @@ let snake: Snake;
 let food: Food;
 let audio = new AudioManager();
 let controls: Controls;
-let game: any;
+let game: number | undefined;
 
 const fruitSprite = new Image();
 fruitSprite.src = './assets/fruit_types.png';
@@ -64,7 +64,7 @@ function startGame() {
 
   document.getElementById('overlay')!.classList.remove('visible');
   clearInterval(game);
-  game = setInterval(draw, 200);
+  game = window.setInterval(draw, 200);
 }
 
 function draw() {
@@ -115,18 +115,34 @@ function showGameOver() {
   document.getElementById('start-btn')!.addEventListener('click', startGame);
 }
 
-// Botones reales
-document.getElementById('audio-btn')!.addEventListener('click', () => {
+// Controles de los botones touch
+document.getElementById('btn-up')?.addEventListener('click', () => {
+  if (snake.direction !== 'DOWN') snake.setDirection('UP');
+});
+document.getElementById('btn-down')?.addEventListener('click', () => {
+  if (snake.direction !== 'UP') snake.setDirection('DOWN');
+});
+document.getElementById('btn-left')?.addEventListener('click', () => {
+  if (snake.direction !== 'RIGHT') snake.setDirection('LEFT');
+});
+document.getElementById('btn-right')?.addEventListener('click', () => {
+  if (snake.direction !== 'LEFT') snake.setDirection('RIGHT');
+});
+
+// Botones de audio y pausa
+document.getElementById('audio-btn')?.addEventListener('click', () => {
   audio.toggle();
   document.getElementById('audio-btn')!.textContent = audio.enabled ? '🔊' : '🔇';
 });
+document.getElementById('pause-btn')?.addEventListener('click', togglePause);
 
-document.getElementById('pause-btn')!.addEventListener('click', () => {
+function togglePause() {
   if (playing) {
     clearInterval(game);
+    document.getElementById('pause-btn')!.textContent = '▶';
   } else {
-    game = setInterval(draw, 200);
+    game = window.setInterval(draw, 200);
+    document.getElementById('pause-btn')!.textContent = '⏸';
   }
   playing = !playing;
-  document.getElementById('pause-btn')!.textContent = playing ? '⏸' : '▶';
-});
+}
