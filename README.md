@@ -34,6 +34,7 @@ snake/
 │   │   ├── _base.scss
 │   │   ├── _canvas.scss
 │   │   ├── _controls.scss
+│   │   ├── _footer.scss
 │   │   ├── _overlay.scss
 │   │   └── main.scss
 ├── index.html

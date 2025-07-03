@@ -1,0 +1,18 @@
+.footer {
+  bottom: 10px;
+  color: $button-color-control;
+  font-size: 0.9rem;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+
+  a {
+    color: $button-color-control;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
