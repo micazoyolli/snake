@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#a8d093" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="/snake/manifest.json" />
+    <title>Snake</title>
+    <script type="module" crossorigin src="/snake/assets/index-xJlfAde1.js"></script>
+    <link rel="stylesheet" crossorigin href="/snake/assets/index-BxMhEH4U.css">
+  </head>
+  <body>
+    <canvas id="snake" width="608" height="608"></canvas>
+
+    <div id="controls">
+      <button id="audio-btn">🔊</button>
+      <button id="pause-btn">⏸</button>
+    </div>
+
+    <div id="touch-controls">
+      <button id="btn-up">⬆️</button>
+      <div>
+        <button id="btn-left">⬅️</button>
+        <button id="btn-down">⬇️</button>
+        <button id="btn-right">➡️</button>
+      </div>
+    </div>
+
+    <div id="overlay" class="visible">
+      <div class="modal">
+        <h1>Snake</h1>
+        <p>Elige tu fruta:</p>
+        <div class="choices" id="fruit-choices">
+          <span class="fruit-choice" data-index="0"></span>
+          <span class="fruit-choice" data-index="1"></span>
+          <span class="fruit-choice" data-index="2"></span>
+          <span class="fruit-choice" data-index="3"></span>
+          <span class="fruit-choice" data-index="4"></span>
+          <span class="fruit-choice" data-index="5"></span>
+          <span class="fruit-choice" data-index="6"></span>
+          <span class="fruit-choice" data-index="7"></span>
+          <span class="fruit-choice" data-index="8"></span>
+          <span class="fruit-choice" data-index="9"></span>
+          <span class="fruit-choice" data-index="10"></span>
+          <span class="fruit-choice" data-index="11"></span>
+          <span class="fruit-choice" data-index="12"></span>
+          <span class="fruit-choice" data-index="13"></span>
+        </div>
+
+        <p>Elige color de la snake:</p>
+        <div class="choices" id="color-choices">
+          <span class="color-choice" data-color="#ECD718" style="background:#ECD718"></span>
+          <span class="color-choice" data-color="#3CC746" style="background:#3CC746"></span>
+          <span class="color-choice" data-color="#B84DF2" style="background:#B84DF2"></span>
+          <span class="color-choice" data-color="#F6F6F6" style="background:#F6F6F6"></span>
+          <span class="color-choice" data-color="#1BD9E6" style="background:#1BD9E6"></span>
+          <span class="color-choice" data-color="#4F76F9" style="background:#4F76F9"></span>
+        </div>
+
+        <button id="start-btn">▶ Play</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      Una creación de <a href="https://nadia.dev" target="_blank">&lt;micazoyolli /&gt; ✨</a>
+    </footer>
+
+  </body>
+</html>
