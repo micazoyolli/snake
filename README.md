@@ -20,8 +20,12 @@ Juego interactivo de Snake con canvas HTML5 y TypeScript, desarrollado con estru
 snake/
 ├── public/
 │   ├── assets/
+│   ├── icons/
+│   ├── favicon.ico
 │   ├── manifest.json
-│   └── robots.txt
+│   ├── meta.jpg
+│   ├── robots.txt
+│   └── sitemap.xml
 ├── src/
 │   ├── game/
 │   │   ├── audio.ts
@@ -37,12 +41,14 @@ snake/
 │   │   ├── _footer.scss
 │   │   ├── _overlay.scss
 │   │   └── main.scss
-├── index.html
+├── .editorconfig
 ├── .gitignore
+├── .nvmrc
+├── index.html
 ├── LICENSE
 ├── package.json
 ├── tsconfig.json
-└── vite.config.ts
+└── vite.config.js
 ```
 
 ## ▶️ Uso

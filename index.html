@@ -2,13 +2,53 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="#a8d093" />
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="manifest" href="/manifest.json" />
-    <title>Snake</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Tipografía -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- SEO general -->
+    <meta name="author" content="@micazoyolli" />
+    <meta name="robots" content="index, follow" />
+    <title>Snake | &lt;micazoyolli /&gt;</title>
+    <meta name="title" content="Snake | <micazoyolli />" />
+    <meta name="description" content="Versión personalizada del clásico juego Snake, con selección de fruta, colores, sonidos, controles táctiles y lógica en TypeScript. Juega en desktop o mobile." />
+    <meta name="keywords" content="snake, juego snake, micazoyolli, juego clásico, canvas, Vite, TypeScript, frutas, juego interactivo, juego responsive" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Snake | <micazoyolli />" />
+    <meta property="og:description" content="Versión personalizada del clásico juego Snake. ¿Qué fruta vas a elegir?" />
+    <meta property="og:url" content="https://micazoyolli.github.io/snake/" />
+    <meta property="og:site_name" content="micazoyolli" />
+    <meta property="og:image" content="https://micazoyolli.github.io/snake/meta.jpg" />
+    <meta property="og:image:secure_url" content="https://micazoyolli.github.io/snake/meta.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Snake | <micazoyolli />" />
+    <meta name="twitter:description" content="Versión personalizada del clásico juego Snake. ¿Qué fruta vas a elegir?" />
+    <meta name="twitter:image" content="https://micazoyolli.github.io/snake/meta.jpg" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://micazoyolli.github.io/snake/" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" crossorigin />
+    <link rel="apple-touch-icon" href="https://micazoyolli.github.io/snake/meta.jpg" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Snake" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   </head>
+
   <body>
     <canvas id="snake" width="608" height="608"></canvas>
 
@@ -20,23 +60,23 @@
     <div id="touch-controls">
       <button id="btn-up">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M12 4L4 12H20L12 4Z" fill="white"/>
+          <path d="M12 4L4 12H20L12 4Z" fill="white" />
         </svg>
       </button>
       <div>
         <button id="btn-left">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M4 12L12 4V20L4 12Z" fill="white"/>
+            <path d="M4 12L12 4V20L4 12Z" fill="white" />
           </svg>
         </button>
         <button id="btn-down">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M12 20L20 12H4L12 20Z" fill="white"/>
+            <path d="M12 20L20 12H4L12 20Z" fill="white" />
           </svg>
         </button>
         <button id="btn-right">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M20 12L12 20V4L20 12Z" fill="white"/>
+            <path d="M20 12L12 20V4L20 12Z" fill="white" />
           </svg>
         </button>
       </div>
@@ -47,6 +87,7 @@
         <h1>Snake</h1>
         <p>Elige tu fruta:</p>
         <div class="choices" id="fruit-choices">
+          <!-- 14 opciones -->
           <span class="fruit-choice" data-index="0"></span>
           <span class="fruit-choice" data-index="1"></span>
           <span class="fruit-choice" data-index="2"></span>
