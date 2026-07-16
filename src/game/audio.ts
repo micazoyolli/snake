@@ -1,9 +1,8 @@
 export class AudioManager {
-  sounds: { [key: string]: HTMLAudioElement };
-  enabled: boolean;
+  enabled = true;
+  sounds: Record<string, HTMLAudioElement>;
 
   constructor() {
-    this.enabled = true;
     this.sounds = {
       dead: new Audio('./assets/audio/dead.mp3'),
       eat: new Audio('./assets/audio/eat.mp3'),
@@ -15,7 +14,10 @@ export class AudioManager {
   }
 
   play(name: string) {
-    if (this.enabled && this.sounds[name]) this.sounds[name].play();
+    if (!this.enabled || !this.sounds[name]) return;
+
+    this.sounds[name].currentTime = 0;
+    void this.sounds[name].play();
   }
 
   toggle() {

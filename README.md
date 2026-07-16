@@ -12,7 +12,10 @@ Juego interactivo de Snake con canvas HTML5 y TypeScript, desarrollado con estru
 
 - HTML5 + SCSS (estructura modular)
 - TypeScript (ES6+)
-- Vite
+- Vite 8
+- Node 24
+- @micazoyolli/foundation para SEO/build, teclado y reduced motion
+- Vitest + Playwright para pruebas del piloto
 
 ## 📦 Estructura del proyecto
 
@@ -56,6 +59,11 @@ snake/
 ```bash
 yarn install
 yarn dev
+yarn lint
+yarn typecheck
+yarn test
+yarn smoke
+yarn build
 ```
 
 Abre `http://localhost:5173/snake/` para jugar.

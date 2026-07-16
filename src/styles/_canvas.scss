@@ -1,15 +1,24 @@
+@use './base' as *;
+
 canvas {
+  aspect-ratio: 1;
+  background: #aad750;
   border: 30px solid $border-color;
   border-radius: 20px;
   display: block;
   left: 50%;
-  max-height: 90vh;
-  max-width: 90vw;
+  max-height: 72vh;
+  max-width: 88vw;
   position: absolute;
-  top: 50%;
+  top: 48%;
   transform: translate(-50%, -50%);
 
+  &.is-hidden {
+    display: none;
+  }
+
   @media (max-width: 669px) {
-    top: 40%;
+    border-width: 18px;
+    top: 38%;
   }
 }

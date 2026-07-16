@@ -1,5 +1,5 @@
-@import './base';
-@import './canvas';
-@import './controls';
-@import './overlay';
-@import './footer';
+@use './base' as *;
+@use './canvas';
+@use './controls';
+@use './overlay';
+@use './footer';

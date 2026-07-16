@@ -1,13 +1,14 @@
+@use './base' as *;
+
 #overlay {
   align-items: center;
   background: rgba(0, 0, 0, 0.7);
   display: none;
-  height: 100%;
+  inset: 0;
   justify-content: center;
-  left: 0;
+  padding: 1rem;
   position: fixed;
-  top: 0;
-  width: 100%;
+  z-index: 4;
 
   &.visible {
     display: flex;
@@ -18,69 +19,74 @@
     border-radius: 10px;
     color: #4f4f4f;
     font-family: $font-family;
+    max-height: min(90vh, 620px);
+    max-width: 420px;
+    overflow: auto;
     padding: 20px;
     text-align: center;
+    width: min(100%, 420px);
+  }
 
-    @media (max-width: 660px) {
-      width: 85%;
-    }
+  h1 {
+    font-weight: 700;
+    margin: 0 0 10px;
+  }
 
-    h1 {
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
+  p {
+    margin: 0.75rem 0;
+  }
 
-    .choices {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-bottom: 10px;
+  .choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 
-      .fruit-choice {
-        background-image: url(#{$fruit-sprite});
-        background-repeat: no-repeat;
-        background-size: calc(#{$fruit-total-width} * 35 / 138) 35px;
-        cursor: pointer;
-        display: inline-block;
-        height: 35px;
-        width: 35px;
+  .fruit-choice {
+    background-color: transparent;
+    background-image: url(#{$fruit-sprite});
+    background-repeat: no-repeat;
+    background-size: calc(#{$fruit-total-width} * #{$fruit-size} / #{$fruit-source-size}) $fruit-size;
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    height: $fruit-size;
+    padding: 0;
+    width: $fruit-size;
 
-        @for $i from 0 through 13 {
-          &[data-index='#{$i}'] {
-            background-position: -#{$i * 35}px 0;
-          }
-        }
-
-        &.selected {
-          border: 2px solid $border-color;
-          box-shadow: 0 0 5px $border-color;
-        }
-      }
-
-      .color-choice {
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        cursor: pointer;
-        display: inline-block;
-        height: 24px;
-        width: 24px;
-
-        &.selected {
-          border: 2px solid $border-color;
-          box-shadow: 0 0 5px $border-color;
-        }
+    @for $i from 0 through 13 {
+      &[data-index='#{$i}'] {
+        background-position: -#{$i * 35}px 0;
       }
     }
+  }
 
-    button {
-      background: $button-bg;
-      border: none;
-      border-radius: 4px;
-      color: $button-color;
-      cursor: pointer;
-      font-size: 18px;
-      padding: 10px 20px;
-    }
+  .color-choice {
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    height: 28px;
+    padding: 0;
+    width: 28px;
+  }
+
+  .fruit-choice.selected,
+  .color-choice.selected {
+    border-color: $border-color;
+    box-shadow: 0 0 5px $border-color;
+  }
+
+  #start-btn {
+    background: $button-bg;
+    border: 0;
+    border-radius: 6px;
+    color: $button-color;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 0.75rem;
+    padding: 10px 20px;
   }
 }
