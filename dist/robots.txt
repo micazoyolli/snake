@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /snake/
+Sitemap: https://micazoyolli.github.io/snake/sitemap.xml
