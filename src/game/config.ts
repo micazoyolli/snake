@@ -8,6 +8,10 @@ export const INITIAL_DIRECTION = 'RIGHT';
 export const INITIAL_SNAKE_POSITION = { x: 9, y: 10 };
 export const LOGICAL_SIZE = BOARD_COLS * CELL_SIZE;
 
+export const BOARD_COLORS = ['#AAD750', '#A2D148'] as const;
+export const HEADER_COLOR = '#436b2d';
+export const SNAKE_DETAIL_COLOR = '#fff';
+
 export const SNAKE_COLORS = [
   '#ECD718',
   '#3CC746',

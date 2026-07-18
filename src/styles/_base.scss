@@ -1,15 +1,5 @@
 @use '@micazoyolli/foundation/scss' as foundation;
-
-$background-color: #a8d093;
-$border-color: #4f7e33;
-$button-bg: #3cc746;
-$button-color: #fff;
-$button-color-control: #436b2d;
-$font-family: 'Fredoka', sans-serif;
-$fruit-sprite: '/assets/fruit_types.png';
-$fruit-size: 35px;
-$fruit-source-size: 138px;
-$fruit-total-width: 1932px;
+@use './tokens' as *;
 
 *,
 *::before,
@@ -33,7 +23,7 @@ button {
 button:focus-visible,
 canvas:focus-visible,
 a:focus-visible {
-  outline: 3px solid #ffffff;
+  outline: 3px solid $button-color;
   outline-offset: 4px;
 }
 

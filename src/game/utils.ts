@@ -1,12 +1,18 @@
-import { CELL_SIZE, FRUIT_SOURCE_SIZE, HEADER_ROWS } from './config';
+import {
+  BOARD_COLORS,
+  CELL_SIZE,
+  FRUIT_SOURCE_SIZE,
+  HEADER_COLOR,
+  HEADER_ROWS,
+  SNAKE_DETAIL_COLOR,
+} from './config';
 import type { Point, SnakeState } from './types';
 
 export function drawBackground(ctx: CanvasRenderingContext2D, width: number, height: number, box = CELL_SIZE) {
-  const colors = ['#AAD750', '#A2D148'];
   for (let y = 0; y < height; y += box) {
     for (let x = 0; x < width; x += box) {
       const index = ((x / box) + (y / box)) % 2;
-      ctx.fillStyle = colors[index];
+      ctx.fillStyle = BOARD_COLORS[index];
       ctx.fillRect(x, y, box, box);
     }
   }
@@ -21,10 +27,10 @@ export function drawHeader(
   box: number,
   width: number
 ) {
-  ctx.fillStyle = '#436b2d';
+  ctx.fillStyle = HEADER_COLOR;
   ctx.fillRect(0, 0, width, box * HEADER_ROWS);
 
-  ctx.fillStyle = '#fff';
+  ctx.fillStyle = SNAKE_DETAIL_COLOR;
   ctx.font = '24px Fredoka, sans-serif';
   ctx.textBaseline = 'middle';
 
@@ -63,11 +69,11 @@ export function drawSnake(ctx: CanvasRenderingContext2D, snake: SnakeState, box 
   snake.body.forEach((segment, index) => {
     ctx.fillStyle = getGradientColor(snake.color, index, snake.body.length);
     ctx.fillRect(segment.x * box, segment.y * box, box, box);
-    ctx.strokeStyle = '#fff';
+    ctx.strokeStyle = SNAKE_DETAIL_COLOR;
     ctx.strokeRect(segment.x * box, segment.y * box, box, box);
 
     if (index === 0) {
-      ctx.fillStyle = '#fff';
+      ctx.fillStyle = SNAKE_DETAIL_COLOR;
       ctx.beginPath();
       ctx.arc(segment.x * box + box / 4, segment.y * box + box / 4, 3, 0, Math.PI * 2);
       ctx.arc(segment.x * box + (3 * box) / 4, segment.y * box + box / 4, 3, 0, Math.PI * 2);

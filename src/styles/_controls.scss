@@ -1,4 +1,4 @@
-@use './base' as *;
+@use './tokens' as *;
 
 #controls {
   display: flex;
@@ -9,7 +9,7 @@
   z-index: 2;
 
   button {
-    background: rgba(255, 255, 255, 0.35);
+    background: $control-bg;
     border: 0;
     border-radius: 8px;
     color: $button-color-control;
@@ -54,6 +54,7 @@
     }
 
     svg {
+      color: $button-color;
       display: block;
       height: 24px;
       width: 24px;

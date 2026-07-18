@@ -1,8 +1,8 @@
-@use './base' as *;
+@use './tokens' as *;
 
 canvas {
   aspect-ratio: 1;
-  background: #aad750;
+  background: $board-color;
   border: 30px solid $border-color;
   border-radius: 20px;
   display: block;

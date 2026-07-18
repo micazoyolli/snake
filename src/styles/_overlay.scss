@@ -1,8 +1,8 @@
-@use './base' as *;
+@use './tokens' as *;
 
 #overlay {
   align-items: center;
-  background: rgba(0, 0, 0, 0.7);
+  background: $modal-backdrop-color;
   display: none;
   inset: 0;
   justify-content: center;
@@ -15,9 +15,9 @@
   }
 
   .modal {
-    background: #fff;
+    background: $modal-surface;
     border-radius: 10px;
-    color: #4f4f4f;
+    color: $modal-color;
     font-family: $font-family;
     max-height: min(90vh, 620px);
     max-width: 420px;
@@ -64,13 +64,37 @@
   }
 
   .color-choice {
-    border: 2px solid #ccc;
     border-radius: 6px;
+    border: 2px solid $choice-border-color;
     cursor: pointer;
     display: inline-block;
     height: 28px;
     padding: 0;
     width: 28px;
+
+    &--blue {
+      background: $snake-blue;
+    }
+
+    &--cyan {
+      background: $snake-cyan;
+    }
+
+    &--green {
+      background: $snake-green;
+    }
+
+    &--purple {
+      background: $snake-purple;
+    }
+
+    &--white {
+      background: $snake-white;
+    }
+
+    &--yellow {
+      background: $snake-yellow;
+    }
   }
 
   .fruit-choice.selected,
