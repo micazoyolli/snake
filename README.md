@@ -2,7 +2,7 @@
 
 Juego interactivo de Snake con canvas HTML5 y TypeScript, desarrollado con estructura modular, SCSS y Vite. Incluye sonido, selección de fruta y color, y diseño responsive para desktop y mobile.
 
-<img alt="Snake" src="https://github.com/micazoyolli/snake/blob/master/public/assets/screenshot.png" width="500" />
+<img alt="Snake" src="https://github.com/micazoyolli/snake/blob/main/public/assets/screenshot.png" width="500" />
 
 ## 🌐 Demo
 
