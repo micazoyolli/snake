@@ -29,6 +29,6 @@
     "vitest": "4.1.10"
   },
   "dependencies": {
-    "@micazoyolli/foundation": "0.4.0"
+    "@micazoyolli/foundation": "0.4.1"
   }
 }
