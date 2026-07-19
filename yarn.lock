@@ -113,10 +113,10 @@
   resolved "https://registry.yarnpkg.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz#6912b00d2c631c0d15ce1a7ab57cd657f2a8f8ba"
   integrity sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==
 
-"@micazoyolli/foundation@0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@micazoyolli/foundation/-/foundation-0.3.2.tgz#32cf6df920d184f41e92dc430a6a612aee668336"
-  integrity sha512-OpcVyHFdBlZf06lHjKkQLRi74UG1cQrUMQFC5t3I1ypuPijSRZ/F5c5bTDP1rGjPvqeIuowoOGkAXfmVqCp0gg==
+"@micazoyolli/foundation@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@micazoyolli/foundation/-/foundation-0.4.0.tgz#0cea4e826e9db83d7bc511b35e58899e094fe3a9"
+  integrity sha512-BBUIjpIR+Wb5MrX1bdxHNJs/dJKeuSikcO0hyhe4LXFNh6jmeBLYJEDG4oV30G5TyqHED7vSPJ2Yj4a/4j4shw==
 
 "@napi-rs/wasm-runtime@^1.1.6":
   version "1.1.6"
