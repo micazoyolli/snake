@@ -34,11 +34,14 @@
   }
 
   &__link {
+    align-items: center;
     background: $button-color-control;
     border-radius: 999px;
+    box-sizing: border-box;
     color: $button-color;
     display: inline-flex;
     font-weight: 800;
+    justify-content: center;
     min-height: 44px;
     padding: 0.75rem 1.15rem;
     text-decoration: none;
