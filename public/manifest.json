@@ -2,7 +2,13 @@
   "name": "Snake",
   "short_name": "Snake",
   "lang": "es",
+  "id": "/snake/",
+  "start_url": ".",
+  "scope": "/snake/",
+  "display": "standalone",
   "orientation": "portrait",
+  "theme_color": "#a8d093",
+  "background_color": "#a8d093",
   "icons": [
     {
       "src": "icons/icon-192x192.png",
@@ -14,9 +20,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#a8d093",
-  "background_color": "#a8d093"
+  ]
 }
