@@ -14,6 +14,9 @@ node_modules/
 dist/
 dist-ssr/
 
+# Playwright output
+test-results/
+
 # Local env files
 *.local
 

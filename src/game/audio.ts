@@ -1,15 +1,22 @@
+import deadSound from '../assets/audio/dead.mp3';
+import downSound from '../assets/audio/down.mp3';
+import eatSound from '../assets/audio/eat.mp3';
+import leftSound from '../assets/audio/left.mp3';
+import rightSound from '../assets/audio/right.mp3';
+import upSound from '../assets/audio/up.mp3';
+
 export class AudioManager {
   enabled = true;
   sounds: Record<string, HTMLAudioElement>;
 
   constructor() {
     this.sounds = {
-      dead: new Audio('./assets/audio/dead.mp3'),
-      eat: new Audio('./assets/audio/eat.mp3'),
-      up: new Audio('./assets/audio/up.mp3'),
-      right: new Audio('./assets/audio/right.mp3'),
-      left: new Audio('./assets/audio/left.mp3'),
-      down: new Audio('./assets/audio/down.mp3')
+      dead: new Audio(deadSound),
+      down: new Audio(downSound),
+      eat: new Audio(eatSound),
+      left: new Audio(leftSound),
+      right: new Audio(rightSound),
+      up: new Audio(upSound),
     };
   }
 

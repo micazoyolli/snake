@@ -1,4 +1,5 @@
 import { KEYBOARD_KEYS } from '@micazoyolli/foundation';
+import fruitSpriteUrl from '../assets/fruit_types.png';
 import '../styles/main.scss';
 import { AudioManager } from './audio';
 import { CELL_SIZE, LOGICAL_SIZE, SNAKE_COLORS } from './config';
@@ -62,7 +63,7 @@ class SnakeGame {
       return;
     }
 
-    this.fruitSprite.src = './assets/fruit_types.png';
+    this.fruitSprite.src = fruitSpriteUrl;
     this.bindEvents();
     this.setCanvasSize();
     this.updateSelection();
