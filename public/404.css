@@ -10,20 +10,6 @@
   place-items: center;
   text-align: center;
 }
-.not-found__brand {
-  display: inline-flex;
-}
-.not-found__brand:focus-visible {
-  outline: 3px solid currentcolor;
-  outline-offset: 4px;
-}
-.not-found__logo {
-  border-radius: 1rem;
-  display: block;
-  height: 4.5rem;
-  margin: 0 auto 1.5rem;
-  width: 4.5rem;
-}
 .not-found__panel {
   max-width: 34rem;
 }
@@ -42,15 +28,6 @@
   line-height: 1.6;
   margin: 0 0 1.5rem;
 }
-.not-found__footer {
-  align-self: end;
-  font-size: 0.875rem;
-  padding-top: 1.5rem;
-}
-.not-found__footer a {
-  color: inherit;
-  font-weight: 700;
-}
 .not-found__link {
   align-items: center;
   background: #436b2d;
@@ -67,4 +44,19 @@
 .not-found__link:focus-visible {
   outline: 3px solid #fff;
   outline-offset: 4px;
+}
+
+.footer {
+  color: #436b2d;
+  font-size: 0.9rem;
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+}
+.footer a {
+  color: #436b2d;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
 }

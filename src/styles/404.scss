@@ -12,23 +12,6 @@
   place-items: center;
   text-align: center;
 
-  &__brand {
-    display: inline-flex;
-
-    &:focus-visible {
-      outline: 3px solid currentcolor;
-      outline-offset: 4px;
-    }
-  }
-
-  &__logo {
-    border-radius: 1rem;
-    display: block;
-    height: 4.5rem;
-    margin: 0 auto 1.5rem;
-    width: 4.5rem;
-  }
-
   &__panel {
     max-width: 34rem;
   }
@@ -51,17 +34,6 @@
     margin: 0 0 1.5rem;
   }
 
-  &__footer {
-    align-self: end;
-    font-size: 0.875rem;
-    padding-top: 1.5rem;
-
-    a {
-      color: inherit;
-      font-weight: 700;
-    }
-  }
-
   &__link {
     align-items: center;
     background: $button-color-control;
@@ -78,6 +50,23 @@
     &:focus-visible {
       outline: 3px solid $button-color;
       outline-offset: 4px;
+    }
+  }
+}
+
+.footer {
+  color: $button-color-control;
+  font-size: 0.9rem;
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+
+  a {
+    color: $button-color-control;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
