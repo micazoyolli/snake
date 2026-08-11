@@ -17,8 +17,12 @@ Juego interactivo de Snake con Canvas, selección de fruta y color, audio, nivel
 - Canvas API
 - Vitest
 - Playwright
-- Node 24
 - Micazoyolli Foundation para SEO/build, teclado y reduced motion
+
+## 🧱 Requisitos
+
+- Node 24.18.1 (`engines.node`: `>=24.18.1 <25`)
+- Yarn 1.22.22
 
 ## 📦 Instalación
 

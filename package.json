@@ -3,6 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "packageManager": "yarn@1.22.22",
+  "engines": {
+    "node": ">=24.18.1 <25"
+  },
   "scripts": {
     "dev": "vite",
     "build": "yarn build:404 && yarn typecheck && yarn seo && vite build",
@@ -18,13 +22,13 @@
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@playwright/test": "1.61.1",
+    "@playwright/test": "1.62.1",
     "@types/node": "24.10.4",
-    "eslint": "10.7.0",
+    "eslint": "10.8.1",
     "globals": "17.7.0",
     "sass": "1.101.0",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.64.0",
+    "typescript-eslint": "8.67.0",
     "vite": "8.1.5",
     "vitest": "4.1.10"
   },
