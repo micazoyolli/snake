@@ -3,14 +3,14 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests/smoke',
   use: {
-    baseURL: 'http://127.0.0.1:4273/snake/',
+    baseURL: 'http://127.0.0.1:4273/',
     trace: 'on-first-retry',
   },
   webServer: {
     command: 'yarn build && yarn preview --host 127.0.0.1 --port 4273 --strictPort',
     reuseExistingServer: false,
     timeout: 120_000,
-    url: 'http://127.0.0.1:4273/snake/',
+    url: 'http://127.0.0.1:4273/',
   },
   projects: [
     {
